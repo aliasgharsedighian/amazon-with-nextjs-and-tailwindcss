@@ -1,5 +1,5 @@
 Review:
-This is a example of amazone with Nextjs and tailwindcss
+This is a example of amazon with Nextjs and tailwindcss
 this project not finish yet and i update it soon!
 
 start:

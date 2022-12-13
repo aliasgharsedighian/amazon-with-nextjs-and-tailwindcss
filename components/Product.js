@@ -1,12 +1,31 @@
 import React, { useState } from "react";
 import { StarIcon } from "@heroicons/react/solid";
+import { useDispatch } from "react-redux";
+import { addToBasket } from "../slices/basketSlice";
 
 const MAX_RATING = 5;
 const MIN_RATING = 1;
 function Product({ id, title, price, description, category, image }) {
+  const dispatch = useDispatch();
   const [rating] = useState(
     Math.floor(Math.random() * (MAX_RATING - MIN_RATING + 1)) + MIN_RATING
   );
+
+  const addItemToBasket = () => {
+    const product = {
+      id,
+      title,
+      price,
+      rating,
+      description,
+      category,
+      image,
+      hasPrime,
+    };
+
+    //sending the product as an action to the redux store ... the basket slice
+    dispatch(addToBasket(product));
+  };
 
   const [hasPrime] = useState(Math.random() < 0.5);
   return (
@@ -41,7 +60,9 @@ function Product({ id, title, price, description, category, image }) {
           <p className="text-xs text-gray-500">FREE Next-day Delivery</p>
         </div>
       )}
-      <button className="mt-auto addButton">Add to Basket</button>
+      <button onClick={addItemToBasket} className="mt-auto addButton">
+        Add to Basket
+      </button>
     </div>
   );
 }

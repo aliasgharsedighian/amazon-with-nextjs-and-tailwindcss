@@ -3,8 +3,13 @@ import { useSelector } from "react-redux";
 import CheckoutProduct from "../components/CheckoutProduct";
 import Header from "../components/Header";
 import { selectItems } from "../slices/basketSlice";
+import { ProductsType } from "../typing"; 
 
-function Checkout() {
+type Props = {
+  price: number;
+}
+
+function Checkout({ price }: Props) {
   const items = useSelector(selectItems);
   return (
     <div className="bg-gray-100">
@@ -26,7 +31,7 @@ function Checkout() {
                 : "Shopping Basket"}
             </h1>
 
-            {items.map((item, i) => (
+            {items.map((item: ProductsType, i:number) => (
               <CheckoutProduct
                 key={i}
                 id={item.id}
@@ -43,7 +48,18 @@ function Checkout() {
         </div>
 
         {/* {right} */}
-        <div></div>
+        <div>
+          {items.length > 0 && (
+            <>
+              <h2>
+                Subtotal ({items.length} items):
+                <span>
+                  <span>${price}</span>
+                </span>
+              </h2>
+            </>
+          )}
+        </div>
       </main>
     </div>
   );

@@ -3,11 +3,27 @@ import { StarIcon } from "@heroicons/react/solid";
 import { useDispatch } from "react-redux";
 import { addToBasket } from "../slices/basketSlice";
 
+
+type Props = {
+    id: number;
+    title: string;
+    price: number;
+    description: string;
+    category: string;
+    image: string;
+}
+
+interface FillType {
+  value: number | undefined ;
+  start?: number | undefined;
+  end?: number | undefined;
+}
+
 const MAX_RATING = 5;
 const MIN_RATING = 1;
-function Product({ id, title, price, description, category, image }) {
+function Product({ id, title, price, description, category, image }: Props) {
   const dispatch = useDispatch();
-  const [rating] = useState(
+  const [rating] = useState<any>(
     Math.floor(Math.random() * (MAX_RATING - MIN_RATING + 1)) + MIN_RATING
   );
 

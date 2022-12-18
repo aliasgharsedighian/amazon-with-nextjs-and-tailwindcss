@@ -2,6 +2,17 @@ import { StarIcon } from "@heroicons/react/solid";
 import { useDispatch } from "react-redux";
 import { addToBasket, removeFromBasket } from "../slices/basketSlice";
 
+type Props = {
+  id: number;
+  title: string;
+  price: number;
+  rating: number;
+  description: string;
+  category: string;
+  image: string;
+  hasPrime: any
+}
+
 function CheckoutProduct({
   id,
   title,
@@ -11,7 +22,7 @@ function CheckoutProduct({
   category,
   image,
   hasPrime,
-}) {
+}: Props) {
   const dispatch = useDispatch();
   const addItemToBasket = () => {
     const product = {

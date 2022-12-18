@@ -1,4 +1,6 @@
-const FakeStoreApi = [
+import { ProductsType } from "../../typing"; 
+
+const FakeStoreApi: ProductsType[] = [
   {
     id: 1,
     title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
@@ -8,7 +10,7 @@ const FakeStoreApi = [
     category: "men's clothing",
     image: "http://localhost:3000/images/product/product1.jpg",
     rating: {
-      rate: 3.9,
+      rate: 4,
       count: 120,
     },
   },
@@ -21,7 +23,7 @@ const FakeStoreApi = [
     category: "men's clothing",
     image: "http://localhost:3000/images/product/product2.jpg",
     rating: {
-      rate: 4.1,
+      rate: 4,
       count: 259,
     },
   },
@@ -34,7 +36,7 @@ const FakeStoreApi = [
     category: "men's clothing",
     image: "http://localhost:3000/images/product/product3.jpg",
     rating: {
-      rate: 4.7,
+      rate: 5,
       count: 500,
     },
   },
@@ -47,7 +49,7 @@ const FakeStoreApi = [
     category: "men's clothing",
     image: "http://localhost:3000/images/product/product4.jpg",
     rating: {
-      rate: 2.1,
+      rate: 2,
       count: 430,
     },
   },
@@ -61,7 +63,7 @@ const FakeStoreApi = [
     category: "jewelery",
     image: "http://localhost:3000/images/product/product5.jpg",
     rating: {
-      rate: 4.6,
+      rate: 5,
       count: 400,
     },
   },
@@ -74,7 +76,7 @@ const FakeStoreApi = [
     category: "jewelery",
     image: "http://localhost:3000/images/product/product6.jpg",
     rating: {
-      rate: 3.9,
+      rate: 4,
       count: 70,
     },
   },
@@ -100,7 +102,7 @@ const FakeStoreApi = [
     category: "jewelery",
     image: "http://localhost:3000/images/product/product8.jpg",
     rating: {
-      rate: 1.9,
+      rate: 2,
       count: 100,
     },
   },
@@ -113,7 +115,7 @@ const FakeStoreApi = [
     category: "electronics",
     image: "http://localhost:3000/images/product/product9.jpg",
     rating: {
-      rate: 3.3,
+      rate: 3,
       count: 203,
     },
   },
@@ -126,7 +128,7 @@ const FakeStoreApi = [
     category: "electronics",
     image: "http://localhost:3000/images/product/product10.jpg",
     rating: {
-      rate: 2.9,
+      rate: 3,
       count: 470,
     },
   },
@@ -140,7 +142,7 @@ const FakeStoreApi = [
     category: "electronics",
     image: "http://localhost:3000/images/product/product11.jpg",
     rating: {
-      rate: 4.8,
+      rate: 5,
       count: 319,
     },
   },
@@ -154,7 +156,7 @@ const FakeStoreApi = [
     category: "electronics",
     image: "http://localhost:3000/images/product/product12.jpg",
     rating: {
-      rate: 4.8,
+      rate: 5,
       count: 400,
     },
   },
@@ -167,7 +169,7 @@ const FakeStoreApi = [
     category: "electronics",
     image: "http://localhost:3000/images/product/product13.jpg",
     rating: {
-      rate: 2.9,
+      rate: 3,
       count: 250,
     },
   },
@@ -181,7 +183,7 @@ const FakeStoreApi = [
     category: "electronics",
     image: "http://localhost:3000/images/product/product14.jpg",
     rating: {
-      rate: 2.2,
+      rate: 2,
       count: 140,
     },
   },
@@ -194,7 +196,7 @@ const FakeStoreApi = [
     category: "women's clothing",
     image: "http://localhost:3000/images/product/product15.jpg",
     rating: {
-      rate: 2.6,
+      rate: 4,
       count: 235,
     },
   },
@@ -208,7 +210,7 @@ const FakeStoreApi = [
     category: "women's clothing",
     image: "http://localhost:3000/images/product/product16.jpg",
     rating: {
-      rate: 2.9,
+      rate: 3,
       count: 340,
     },
   },
@@ -221,7 +223,7 @@ const FakeStoreApi = [
     category: "women's clothing",
     image: "http://localhost:3000/images/product/product17.jpg",
     rating: {
-      rate: 3.8,
+      rate: 4,
       count: 679,
     },
   },
@@ -234,7 +236,7 @@ const FakeStoreApi = [
     category: "women's clothing",
     image: "http://localhost:3000/images/product/product18.jpg",
     rating: {
-      rate: 4.7,
+      rate: 5,
       count: 130,
     },
   },
@@ -247,7 +249,7 @@ const FakeStoreApi = [
     category: "women's clothing",
     image: "http://localhost:3000/images/product/product19.jpg",
     rating: {
-      rate: 4.5,
+      rate: 4,
       count: 146,
     },
   },
@@ -260,7 +262,7 @@ const FakeStoreApi = [
     category: "women's clothing",
     image: "http://localhost:3000/images/product/product20.jpg",
     rating: {
-      rate: 3.6,
+      rate: 4,
       count: 145,
     },
   },

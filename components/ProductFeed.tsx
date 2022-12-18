@@ -1,12 +1,17 @@
 import React from "react";
+import { ProductsType } from "../typing";
 import Product from "./Product";
 
-function ProductFeed({ products }) {
+type Props = {
+  products: ProductsType[];
+}
+
+function ProductFeed({ products }: Props) {
   return (
     <div className="grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:mt-[-8rem] mx-auto">
       {products
         .slice(0, 4)
-        .map(({ id, title, price, description, category, image }) => (
+        .map(({ id, title, price, description, category, image }: ProductsType) => (
           <Product
             key={id}
             id={id}
@@ -27,7 +32,7 @@ function ProductFeed({ products }) {
       <div className="md:col-span-2">
         {products
           .slice(4, 5)
-          .map(({ id, title, price, description, category, image }) => (
+          .map(({ id, title, price, description, category, image }: ProductsType) => (
             <Product
               key={id}
               id={id}
@@ -41,7 +46,7 @@ function ProductFeed({ products }) {
       </div>
       {products
         .slice(5, products.length)
-        .map(({ id, title, price, description, category, image }) => (
+        .map(({ id, title, price, description, category, image }: ProductsType) => (
           <Product
             key={id}
             id={id}

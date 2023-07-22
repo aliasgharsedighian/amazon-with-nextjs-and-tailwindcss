@@ -1,26 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { StarIcon } from "@heroicons/react/solid";
 import { useDispatch } from "react-redux";
 import { addToBasket } from "../slices/basketSlice";
 
-
 type Props = {
-    id: number;
-    title: string;
-    price: number;
-    description: string;
-    category: string;
-    image: string;
-}
+  id: number;
+  title: string;
+  price: number;
+  description: string;
+  category: string;
+  image: string;
+};
 
 interface FillType {
-  value: number | undefined ;
+  value: number | undefined;
   start?: number | undefined;
   end?: number | undefined;
 }
 
 const MAX_RATING = 5;
 const MIN_RATING = 1;
+
 function Product({ id, title, price, description, category, image }: Props) {
   const dispatch = useDispatch();
   const [rating] = useState<any>(
@@ -42,6 +42,9 @@ function Product({ id, title, price, description, category, image }: Props) {
     //sending the product as an action to the redux store ... the basket slice
     dispatch(addToBasket(product));
   };
+  useEffect(() => {
+    console.log(rating);
+  });
 
   const [hasPrime] = useState(Math.random() < 0.5);
   return (

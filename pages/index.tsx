@@ -1,5 +1,4 @@
 import Head from "next/head";
-// import { useState } from "react";
 import Banner from "../components/Banner";
 import Header from "../components/Header";
 import ProductFeed from "../components/ProductFeed";
@@ -8,11 +7,9 @@ import { ProductsType } from "../typing";
 
 type Props = {
   products: ProductsType[];
-}
+};
 
-export default function Home({products}:Props) {
-  // const [products, setProducts] = useState<ProductsType[]>(FakeStoreApi);
-
+export default function Home({ products }: Props) {
   return (
     <div className="bg-gray-100">
       <Head>

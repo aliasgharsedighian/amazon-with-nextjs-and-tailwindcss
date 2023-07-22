@@ -1,0 +1,130 @@
+.all-navbar-container {
+  margin-top: 50px;
+}
+.navbar-container {
+  color: var(--white);
+  z-index: 2;
+  top: 0;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+  width: 100%;
+  transition: 350ms;
+}
+.navbar-container.active {
+  background-color: var(--white);
+  color: var(--black);
+  transition: 350ms;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.navbar-right-side {
+  display: flex;
+  gap: 80px;
+}
+.navbar-menu-icon {
+  width: 30px;
+  display: none;
+  cursor: pointer;
+}
+.navbar-user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 5px;
+}
+.navbar-user p {
+  font-size: 1rem;
+}
+.navbar-links p:hover {
+  scale: 1.05;
+}
+.navbar-links {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* {navbar menu open} */
+
+.navbar-open-menu {
+  display: flex;
+  position: fixed;
+  top: 70px;
+  right: -100%;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 30px;
+  background-color: var(--white);
+  width: 250px;
+  height: 90vh;
+  padding: 30px 20px;
+  transition: 850ms;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+.navbar-open-menu.active {
+  right: 0;
+  transition: 350ms;
+}
+.navbar-open-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+}
+.navbar-open-menu-item img {
+  width: 25px;
+}
+.navbar-open-menu-item span {
+  font-size: 15px;
+  color: var(--black);
+}
+
+/* media Querys */
+
+@media screen and (width<= 576px) {
+  .navbar-links {
+    display: none;
+  }
+  .navbar-container {
+    padding: 20px;
+  }
+  .navbar-menu-icon {
+    display: inline;
+  }
+}
+@media screen and (576px<width<= 768px) {
+  .navbar-links {
+    display: none;
+  }
+  .navbar-container {
+    padding: 20px;
+  }
+  .navbar-menu-icon {
+    display: inline;
+  }
+}
+@media screen and (768px<width<= 950px) {
+  .navbar-links {
+    font-size: 12px;
+  }
+  .navbar-container {
+    padding: 20px;
+  }
+  .navbar-user p {
+    font-size: 12px;
+  }
+}
+@media screen and (width< 950px) {
+}

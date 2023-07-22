@@ -1,0 +1,25 @@
+.home-bg-container {
+  height: 730px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-bg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  /* background-color: #3d6b99; */
+}
+
+/* media Querys */
+
+@media screen and (width<= 576px) {
+}
+@media screen and (576px<width<= 768px) {
+}
+@media screen and (768px<width<= 950px) {
+}
+@media screen and (width< 950px) {
+}

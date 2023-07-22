@@ -1,0 +1,78 @@
+.carousel-container-style {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+}
+.coin-detail-container {
+  display: flex;
+  width: 80%;
+}
+.coin-icon-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.coin-icon-name h4 {
+  font-size: 11px;
+  font-weight: bold;
+  opacity: 0.7;
+}
+.coin-icon-name h5 {
+  font-size: 15px;
+  font-weight: bolder;
+  opacity: 0.9;
+}
+.coin-detail-img {
+  width: 35px !important;
+  height: 30px !important;
+}
+.coin-tether-price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+}
+.coin-tether-price span {
+  font-size: 12px;
+}
+
+/* media Querys */
+
+@media screen and (width<= 576px) {
+  .coin-icon-name h5 {
+    font-size: 12px;
+  }
+  .coin-icon-name h4 {
+    font-size: 10px;
+  }
+  .coin-tether-price {
+    font-size: 11px;
+  }
+}
+@media screen and (576px<width<= 768px) {
+  .coin-icon-name h5 {
+    font-size: 12px;
+  }
+  .coin-icon-name h4 {
+    font-size: 10px;
+  }
+  .coin-tether-price {
+    font-size: 11px;
+  }
+}
+@media screen and (768px<width<= 950px) {
+  .coin-icon-name h5 {
+    font-size: 15px;
+  }
+  .coin-icon-name h4 {
+    font-size: 12px;
+  }
+  .coin-tether-price {
+    font-size: 13px;
+  }
+}
+@media screen and (width< 950px) {
+}
